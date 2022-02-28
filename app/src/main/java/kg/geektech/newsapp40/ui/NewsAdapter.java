@@ -63,7 +63,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
             if (getAdapterPosition() %2 == 0){
                 itemView.setBackgroundColor(Color.GRAY);
             }
-            SimpleDateFormat sdf = new SimpleDateFormat(  "HH:mm:ss"+" - " + ".dd.yy" );
+
+            SimpleDateFormat sdf = new SimpleDateFormat(  " d MMM yyyy HH:mm:ss" );
             String a = sdf.format(news.getCreatedAt());
             binding.textTitle.setText(news.getTitle());
             binding.time.setText(a);
