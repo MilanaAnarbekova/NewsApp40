@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/user/AndroidStudioProjects/NewsApp40/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.190625" />
         <entry key="..\:/Users/user/AndroidStudioProjects/NewsApp40/app/src/main/res/drawable/first_screeh.xml" value="0.190625" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/NewsApp40/app/src/main/res/drawable/first_screen.xml" value="0.1125" />
         <entry key="..\:/Users/user/AndroidStudioProjects/NewsApp40/app/src/main/res/drawable/ic_add.xml" value="0.190625" />
         <entry key="..\:/Users/user/AndroidStudioProjects/NewsApp40/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.19427083333333334" />
         <entry key="..\:/Users/user/AndroidStudioProjects/NewsApp40/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.190625" />
@@ -15,8 +16,8 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/NewsApp40/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/NewsApp40/app/src/main/res/layout/fragment_news.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/NewsApp40/app/src/main/res/layout/fragment_notifications.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/NewsApp40/app/src/main/res/layout/fragment_person.xml" value="0.1" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/NewsApp40/app/src/main/res/layout/item_board.xml" value="0.165625" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/NewsApp40/app/src/main/res/layout/fragment_person.xml" value="0.22" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/NewsApp40/app/src/main/res/layout/item_board.xml" value="0.18" />
         <entry key="..\:/Users/user/AndroidStudioProjects/NewsApp40/app/src/main/res/layout/item_news.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/NewsApp40/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
       </map>

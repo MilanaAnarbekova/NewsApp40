@@ -6,15 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".person.PersonFragment">
 
-    <ImageView
-        android:id="@+id/image_person"
-        android:layout_width="112dp"
-        android:layout_height="112dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/ic_baseline_person_24"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="121dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/image_person"
+            android:layout_width="121dp"
+            android:layout_height="121dp"
+            android:src="@drawable/ic_baseline_person_24" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:hint="person name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_view" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_200"
+        android:text="clear all"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

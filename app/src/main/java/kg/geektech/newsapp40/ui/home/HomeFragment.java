@@ -16,6 +16,9 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import java.util.List;
+
+import kg.geektech.newsapp40.App;
 import kg.geektech.newsapp40.R;
 import kg.geektech.newsapp40.databinding.FragmentHomeBinding;
 import kg.geektech.newsapp40.models.News;
@@ -54,6 +57,8 @@ public class HomeFragment extends Fragment {
             }
         });
             binding.recyclerView.setAdapter(adapter);
+            List<News> newsList = App.dataBase.newsDao().getAllNews();
+            adapter.addItems(newsList);
         getParentFragmentManager().setFragmentResultListener("rk_news",
                 getViewLifecycleOwner(), new FragmentResultListener() {
                     @Override

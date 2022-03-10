@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 import kg.geektech.newsapp40.R;
 import kg.geektech.newsapp40.databinding.ItemNewsBinding;
@@ -47,6 +48,11 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     public void addItem(News news) {
         list.add(0, news);
         notifyItemInserted(0);
+    }
+
+    public void addItems(List<News> newsList){
+        list = (ArrayList<News>) newsList;
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

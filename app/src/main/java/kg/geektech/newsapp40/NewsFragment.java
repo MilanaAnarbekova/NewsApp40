@@ -46,11 +46,12 @@ public class NewsFragment extends Fragment {
 
     private void save() {
         String text = binding.editText.getText().toString();
-        News news = new News(text , System.currentTimeMillis());
+        News news = new News(text , System.currentTimeMillis() , "Description");
 
         Bundle bundle  = new Bundle();
         bundle.putSerializable("news",news);
         getParentFragmentManager().setFragmentResult("rk_news" , bundle);
+        App.dataBase.newsDao().insertNews(news);
         close();
     }
 
