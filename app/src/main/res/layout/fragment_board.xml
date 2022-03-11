@@ -15,7 +15,7 @@
         android:layout_margin="32dp"
         android:text="Skip"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="21sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,9 +30,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
         app:dotsColor="@color/gray"
-        app:dotsSize="13dp"
+        app:dotsSize="9dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:selectedDotColor="@color/purple_200" />
 
 

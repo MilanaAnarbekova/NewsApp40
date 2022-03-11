@@ -37,7 +37,6 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.ViewHolder> 
     }
 
 
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -79,16 +78,25 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.ViewHolder> 
         }
 
         public void bind(ScreenItem screenItems) {
-            if (getAdapterPosition() == 2){
-                binding.start.setVisibility(View.VISIBLE);
 
-            }else {
+            if (getAdapterPosition() == getItemCount() - 1) {
+                binding.start.setVisibility(View.VISIBLE);
+                binding.lottie.setAnimation(R.raw.job);
+
+            } else if ( getAdapterPosition() == 0) {
+                binding.lottie.setAnimation(R.raw.plants);
                 binding.start.setVisibility(View.INVISIBLE);
+            } else {
+                binding.start.setVisibility(View.INVISIBLE);
+                binding.lottie.setAnimation(R.raw.popcorn);
             }
-            binding.image.setImageResource(screenItems.getImage());
             binding.textDes.setText(screenItems.getTextDes());
             binding.textTitle.setText(screenItems.getTitle());
         }
 
+
     }
+
 }
+
+

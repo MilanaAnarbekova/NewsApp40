@@ -14,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 import java.util.ArrayList;
 
 import kg.geektech.newsapp40.R;
@@ -73,10 +75,11 @@ binding = FragmentBoardBinding.inflate(getLayoutInflater());
     }
 
     private void loadData() {
-        screenList.add(new ScreenItem(R.drawable.first_screen_item,"kfmdk","jkdbkb"));
-        screenList.add(new ScreenItem(R.drawable.first_screen_item,"kfmdk","jkdbkb"));
-        screenList.add(new ScreenItem(R.drawable.first_screen_item,"kfmdk","jkdbkb"));
+        screenList.add(new ScreenItem(R.raw.cat,"lottie","jkdbkb"));
+        screenList.add(new ScreenItem(R.raw.job,"gradle","jkdbkb"));
+        screenList.add(new ScreenItem(R.raw.plants,"kfmdk","jkdbkb"));
     }
+
 
 
 }

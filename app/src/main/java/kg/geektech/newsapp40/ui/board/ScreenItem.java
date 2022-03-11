@@ -1,9 +1,14 @@
 package kg.geektech.newsapp40.ui.board;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ScreenItem  {
+
+    LottieAnimationView lottie;
+
     private int image;
     private String title;
     private String textDes;
