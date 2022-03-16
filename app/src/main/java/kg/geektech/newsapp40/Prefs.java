@@ -12,7 +12,13 @@ public class Prefs {
         preferences = context.getSharedPreferences("settings", Context.MODE_PRIVATE);
 
     }
+    public void saveBoardState(){
+        preferences.edit().putBoolean("boardState", true).apply();
+    }
 
+    public boolean isBoardShow(){
+        return preferences.getBoolean("boardState",false);
+    }
     public  void saveNameState(String name){
         preferences.edit().putString("name",name).apply();
     }

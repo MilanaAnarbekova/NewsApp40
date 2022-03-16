@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/phone_fragment">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -37,4 +37,14 @@
         android:name="kg.geektech.newsapp40.ui.board.BoardFragment"
         android:label="fragment_board"
         tools:layout="@layout/fragment_board" />
+
+    <fragment
+        android:id="@+id/phone_fragment"
+        android:name="kg.geektech.newsapp40.phone.PhoneFragment"
+        android:label="@string/fragment_phone"
+        tools:layout="@layout/fragment_phone" >
+
+
+    </fragment>
+
 </navigation>

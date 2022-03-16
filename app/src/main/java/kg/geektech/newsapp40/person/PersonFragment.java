@@ -78,15 +78,14 @@ public class PersonFragment extends Fragment {
     }
 
     private void goImage() {
-        ActivityResultLauncher<String> image = registerForActivityResult(new ActivityResultContracts.GetContent(), new ActivityResultCallback<Uri>() {
-            @Override
-            public void onActivityResult(Uri uri) {
-                Prefs prefs = new Prefs(getContext());
-                binding.imagePerson.setImageURI(uri);
-                prefs.saveImage(uri);
+        ActivityResultLauncher<String> image = registerForActivityResult
+                (new ActivityResultContracts.GetContent(),
+                        uri -> {
+                            Prefs prefs = new Prefs(getContext());
+                            binding.imagePerson.setImageURI(uri);
+                            prefs.saveImage(uri);
 
-            }
-        });
+                        });
         binding.imagePerson.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

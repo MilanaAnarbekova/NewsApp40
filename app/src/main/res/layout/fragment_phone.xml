@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".phone.PhoneFragment">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="34dp"
+        android:src="@drawable/phone" />
+
+    <TextView
+        android:id="@+id/tv_aut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Authorization"
+        android:textColor="@color/dark_gray"
+        android:textSize="32dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_input_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/input_number"
+        android:textColor="@color/gray" />
+
+    <EditText
+        android:id="@+id/et_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="+(996)"
+        android:inputType="phone" />
+    <EditText
+        android:id="@+id/et_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:inputType="number"
+        android:hint="input code"/>
+
+<Button
+    android:id="@+id/btn_code"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="Verification"
+    android:textSize="12sp"
+    android:backgroundTint="@color/blue"
+    android:visibility="gone"/>
+
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/yellow"
+        android:textSize="12sp"
+        android:text="continue"
+        android:textColor="@color/dark_gray" />
+
+
+</LinearLayout>

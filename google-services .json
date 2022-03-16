@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "355652274745-ka20q4dp9l9hp6e7ga1hfbc4m8624ov3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kg.geektech.newsapp40",
+            "certificate_hash": "967f0616099cf6de48f3d3fb0cfa11f051859535"
+          }
+        },
+        {
           "client_id": "355652274745-0crs84hpf1uerojhhchvvi2v2kpu6rov.apps.googleusercontent.com",
           "client_type": 3
         }

@@ -17,7 +17,9 @@ import android.view.ViewGroup;
 import com.airbnb.lottie.LottieAnimationView;
 
 import java.util.ArrayList;
+import java.util.prefs.PreferenceChangeEvent;
 
+import kg.geektech.newsapp40.Prefs;
 import kg.geektech.newsapp40.R;
 import kg.geektech.newsapp40.databinding.FragmentBoardBinding;
 import kg.geektech.newsapp40.databinding.ItemBoardBinding;
@@ -27,7 +29,7 @@ public class BoardFragment extends Fragment {
     private FragmentBoardBinding binding;
     private ArrayList<ScreenItem> screenList = new ArrayList<>();
     private ScreenItem itemScreen;
-
+    private static Prefs prefs;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +45,7 @@ binding = FragmentBoardBinding.inflate(getLayoutInflater());
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        prefs = new Prefs(requireActivity());
         loadData();
         ViewPager2 viewPager = view.findViewById(R.id.view_pager);
 
@@ -67,6 +70,7 @@ binding = FragmentBoardBinding.inflate(getLayoutInflater());
         binding.skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prefs.saveBoardState();
                 navController.navigateUp();
             }
         });

@@ -19,5 +19,9 @@
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_baseline_person_24"
         android:title="@string/fragment_person" />
+    <item
+        android:id="@+id/phone_fragment"
+        android:icon="@drawable/phone"
+        android:title="@string/fragment_phone" />
 
 </menu>
