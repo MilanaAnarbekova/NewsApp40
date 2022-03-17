@@ -33,7 +33,6 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
 
 import kg.geektech.newsapp40.R;
-import kg.geektech.newsapp40.databinding.FragmentHomeBinding;
 import kg.geektech.newsapp40.databinding.FragmentPhoneBinding;
 import kg.geektech.newsapp40.ui.home.HomeViewModel;
 
@@ -58,26 +57,26 @@ public class PhoneFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         init();
         createCallBack();
-    }
-
-
-    private void init() {
-        mAuth = FirebaseAuth.getInstance();
-
 
         binding.btnContinue.setOnClickListener(v -> {
-            String phone = binding.etNum.toString().trim();
+            String phone = binding.etNum.getText().toString().trim();
             if (TextUtils.isEmpty(phone)) {
                 binding.etNum.setError("Error Phone");
             }else{
                 register(phone);
                 binding.btnContinue.setVisibility(View.INVISIBLE);
                 binding.etNum.setVisibility(View.INVISIBLE);
+                binding.tvInputNum.setVisibility(View.INVISIBLE);
                 binding.etCode.setVisibility(View.VISIBLE);
                 binding.btnCode.setVisibility(View.VISIBLE);
             }
 
         });
+    }
+
+
+    private void init() {
+        mAuth = FirebaseAuth.getInstance();
 
     }
 
@@ -108,7 +107,7 @@ public class PhoneFragment extends Fragment {
             @Override
             public void onVerificationFailed(FirebaseException e) {
                 e.printStackTrace();
-                Log.w("TAG", "onVerificationFailed", e);
+                Log.e("TAG", "onVerificationFailed", e);
 
                 if (e instanceof FirebaseAuthInvalidCredentialsException) {
 
@@ -135,7 +134,7 @@ public class PhoneFragment extends Fragment {
     }
 
     private void initCode(String verificationId) {
-        String code = binding.etCode.getText().toString();
+        String code = binding.etCode.getText().toString().trim();
 
         if (TextUtils.isEmpty(code)) {
             binding.etNum.setError("Error Code");
